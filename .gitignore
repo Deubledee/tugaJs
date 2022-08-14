@@ -35,9 +35,11 @@ bower_components
 .lock-wscript
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
+.vscode
 publicop/build
 publicop/dist
 publicop/img
+publicop/js
 .parcel-cache
 # Dependency directories
 node_modules/
