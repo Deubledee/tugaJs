@@ -8,15 +8,7 @@
 
 const graphQlUrl = "http://localhost:5000/tysix-cms/europe-west2/"
 
-const _HEADERS_ = new Headers({
-    'Access-Control-Allow-Origin': "http://localhost:5000/tysix-cms/europe-west2",
-    'Content-Type': 'application/json',
-    "Accept": "application/json",
-    "tysix-env": "development",
-    'Access-Control-Allow-Methods': 'POST',
-    'Tysix-licence-Origin-Control': "waSyAApWxIz5IhAZ4-tySix-CMS_@Copyright",
-    "tysix-api-origin-control": "AIzaSyDUuOAz-4Tl8iGD3UgtlXurPxYH8tAVmMY"
-})
+const _HEADERS_ = new Headers({})
 
 function headers(customOptions = undefined) {
     if (!!customOptions) Object.keys(customOptions).forEach(header => _HEADERS_.append(header, customOptions[header]))
