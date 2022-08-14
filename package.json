@@ -1,0 +1,24 @@
+{
+    "name": "tugajs-tysyx",
+    "version": "0.2.0",
+    "contributors": [
+        "Deubledee"
+    ],
+    "license": "BSD-3-Clause",
+    "repository": "Deubledee/tysix",
+    "scripts": {
+        "start": "cd publicop && npm start",
+        "build:static": "cd publicop && npm run build",
+        "build:deploy": "cd publicop && npm run copy_to_production",
+        "watch": "node watch/watch.js"
+    },
+    "dependencies": {
+        "chokidar": "^3.5.3",
+        "source-map": "^0.5.7"
+    },
+    "devDependencies": {
+        "@parcel/packager-raw-url": "^2.3.2",
+        "@parcel/transformer-webmanifest": "^2.3.2",
+        "typescript": "^4.6.2"
+    }
+}

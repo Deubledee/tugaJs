@@ -1,0 +1,18 @@
+{
+  "author": "Deubledee",
+  "name": "tugajs",
+  "short_name": "adtrad",
+  "description": "Legal translations",
+  "start_url": "home?type=home&lang=pt",
+  "background_color": "#212D40",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "type": "image/png",
+      "sizes": "16x16"
+    }
+  ],
+  "display": "standalone",
+  "theme_color": "#212D40"
+}

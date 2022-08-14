@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title> tugajs </title>
+    <meta name="description" content="tugajs.com web application with blog">
+    <meta content="" name="keywords">
+    <link rel="manifest" href="./manifest.json">
+    <!--social meta -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@Polymer">
+    <meta property="og:title" content="Title Here">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CMS">
+    <meta name="theme-color" content="#fff">
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="./img/favicon-32x32.png">
+    <link rel="apple-touch-icon" type="image/x-icon" href="./img/favicon-16x16.png">
+    <!-- clear -->
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arapey&display=swap" rel="stylesheet">
+    <!-- cdn webcomponents polyfill -->
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.4.2/webcomponents-loader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.2/web-animations-next-lite.min.js"></script>
+    <!-- main styles -->
+    <link rel="stylesheet" href="./css/main-style.css">
+    <!-- stylesheets -->
+    <link type="application/atom+xml" rel="alternate" href="https://quilljs.com/feed.xml"
+        title="Quill - Your powerful rich text editor">
+
+    <link rel="canonical" href="https://quilljs.com/standalone/snow/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/monokai-sublime.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/quill-emoji@0.2.0/dist/quill-emoji.min.css" />
+    <link href="https://unpkg.com/quill-image-uploader@1.2.2/dist/quill.imageUploader.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.7/quill.snow.css">
+    <!-- scripts -->
+    <script src="./node_modules/web-vitals/dist/polyfill.js"></script>
+    <!-- cdns -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+    <!-- quill -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.7/quill.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quill-emoji@0.2.0/dist/quill-emoji.min.js"></script>
+    <script src="https://unpkg.com/quill-image-uploader@1.2.2/dist/quill.imageUploader.min.js"></script>
+
+    <!-- local -->
+</head>
+<script>
+    /**
+     * * App
+     **/
+    localStorage['app-id'] = "tugajs"
+    window.MyAppGlobals = { rootPath: '/' };
+    /**
+     * * Quill
+     **/
+    const Size = Quill.import('attributors/style/size');
+    Quill.register(Size, true);
+    /** 
+     * * Facebock
+    */
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '1154955821587739',
+            cookie: true,
+            xfbml: true,
+            version: 'v9.0'
+        });
+        FB.AppEvents.logPageView();
+    };
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/pt/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<body>
+
+    <noscript>
+        <meta HTTP-EQUIV="REFRESH" content="0; url=https://europe-west2-tugajs-t6-app.cloudfunctions.net/noscript">
+    </noscript>
+    <app-spinner class="spinner-center" active>
+    </app-spinner>
+    <!-- ======= Header ======= -->
+    <main-app unresolved>
+        <app-header id="top-header" slot="header" toolbar-extended fixed class="top-headder">
+            <app-toolbar toolbar-extended>
+                <div class="toolbar-child toolbar-child-left">
+                    <div id="iconImage" class="icon-image">
+                        <img src="./img/favicon-32x32.png" alt="main icon" />
+                    </div>
+                    <paper-tabs id="toolbar-pages" selected="0" no-slide>
+                    </paper-tabs>
+                </div>
+                <div class="toolbar-child toolbar-child-right nav-login" id="lang-sellector">
+                </div>
+            </app-toolbar>
+        </app-header>
+        <nav class="header-container" slot="hero">
+            <app-header-layout id="header-layout">
+                <app-header id="header" effects="resize-title" condenses fixed shadow slot="header" class="header">
+                    <app-toolbar class="top-toolbar" id="hero-toolbar-top">
+                        <div condensed-title> </div>
+                    </app-toolbar>
+                    <app-toolbar main-title class="bottom-toolbar" id="hero-toolbar-bottom">
+                        <div main-title id="hero">
+
+                        </div>
+                    </app-toolbar>
+                </app-header>
+            </app-header-layout>
+        </nav>
+        <div id="pageview" slot="pageview">
+
+        </div>
+        <footer slot="footer">
+            <nav>
+                <article>
+                    <h2>
+                        TySix.net <span> &copy </span>
+                    </h2>
+                    <h3 title="diogo@tysix.net">
+                        Developed By <a href="mailto:Diogo@tysix.net"> diogo@tysix.net </a>
+                    </h3>
+                    home
+                    <a
+                        href="https://pixabay.com/pt/users/MorningbirdPhoto-129488/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=856151">
+                        MorningbirdPhoto
+                    </a>
+                    <a
+                        href="https://pixabay.com/pt/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=856151">
+                        Pixabay
+                    </a>
+                    under construction
+                    <a
+                        href="https://www.needpix.com/photo/download/444534/under-construction-404-web-site-under-construction-work-building-website-internet">
+                        tashaat Pixabay</a>
+
+                    blog
+                    <a
+                        href="https://pixabay.com/pt/users/edar-609103/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=968603">
+                        edar</a>
+                    <a
+                        href="https://pixabay.com/pt/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=968603">
+                        Pixabay</a>
+                    Imagem de
+                    <a
+                        href="https://pixabay.com/pt/users/DarkWorkX-1664300/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3297994">DarkWorkX</a>
+                    por
+                    <a
+                        href="https://pixabay.com/pt/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3297994">Pixabay</a>
+                    Imagem de <a
+                        href="https://pixabay.com/pt/users/krzysztof-m-1363864/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3331256">krzysztof-m</a>
+                    por <a
+                        href="https://pixabay.com/pt/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3331256">Pixabay</a>
+                </article>
+            </nav>
+        </footer>
+    </main-app>
+    <app-popup-handler>
+    </app-popup-handler>
+    <app-image-handler>
+    </app-image-handler>
+    <script>
+        window.performance && performance.mark && performance.mark('index.html');
+    </script>
+    <script type="module" defer src="./elements/main-app.js"> </script>
+</body>
+
+</html>

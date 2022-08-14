@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <xhtml:link href="https://tugajs-tysixapp.firebaseapp.com/home?type=home&amp;lang=pt" hreflang="pt-PT-pt" rel="alternate" />
+    </url>
+    <url>
+        <xhtml:link href="https://tugajs-tysixapp.firebaseapp.com/home?type=home&amp;lang=en" hreflang="en-uk" rel="alternate" />
+    </url>
+</urlset>

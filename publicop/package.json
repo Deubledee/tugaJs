@@ -1,0 +1,71 @@
+{
+  "name": "tugajs",
+  "version": "0.2.0",
+  "author": "Deubledee",
+  "license": "BSD-3-Clause",
+  "repository": "Deubledee/tysix",
+  "contributors": [
+    "Deubledee"
+  ],
+  "source": [
+    "index.html"
+  ],
+  "publicUrl": [
+    "./img",
+    "./css"
+  ],
+  "browserslist": "Chrome > 50",
+  "type": "module",
+  "engines": {
+    "node": ">= 12"
+  },
+  "scripts": {
+    "start": "rm -r ./dist/** && mkdir -p ./dist && cp -r ./img ./dist && node_modules/.bin/parcel -p 8000 ./index.html",
+    "build": "node_modules/.bin/parcel build --dist-dir build",
+    "copy_to_production": "./copy_to_build.sh"
+  },
+  "keywords": [
+    "web-components",
+    "lit-element",
+    "javascript",
+    "lit"
+  ],
+  "dependencies": {
+    "@polymer/app-layout": "^3.1.0",
+    "@polymer/app-route": "^3.0.2",
+    "@polymer/iron-flex-layout": "^3.0.1",
+    "@polymer/iron-form": "^3.0.1",
+    "@polymer/iron-icon": "^3.0.1",
+    "@polymer/iron-icons": "^3.0.1",
+    "@polymer/iron-iconset-svg": "^3.0.1",
+    "@polymer/iron-media-query": "^3.0.1",
+    "@polymer/iron-overlay-behavior": "^3.0.3",
+    "@polymer/iron-pages": "^3.0.1",
+    "@polymer/iron-selector": "^3.0.1",
+    "@polymer/neon-animation": "^3.0.1",
+    "@polymer/paper-behaviors": "^3.0.1",
+    "@polymer/paper-button": "^3.0.1",
+    "@polymer/paper-card": "^3.0.1",
+    "@polymer/paper-checkbox": "^3.1.0",
+    "@polymer/paper-dropdown-menu": "^3.1.0",
+    "@polymer/paper-fab": "^3.0.1",
+    "@polymer/paper-icon-button": "^3.0.2",
+    "@polymer/paper-input": "^3.2.1",
+    "@polymer/paper-item": "^3.0.1",
+    "@polymer/paper-listbox": "^3.0.1",
+    "@polymer/paper-spinner": "^3.0.2",
+    "@polymer/paper-tabs": "^3.1.0",
+    "@polymer/polymer": "^3.4.1",
+    "firebase": "^9.1.1",
+    "lit": "^2.2.0",
+    "lit-html": "^2.2.0",
+    "web-vitals": "^2.1.0"
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.5.0",
+    "@parcel/transformer-webmanifest": "^2.5.0",
+    "@swc/helpers": "^0.3.6",
+    "@webcomponents/webcomponentsjs": "^2.6.0",
+    "parcel": "^2.5.0"
+  }
+}
