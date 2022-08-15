@@ -114,10 +114,7 @@ import "./util/mixins/image-uploader_mixin.js";
 import "./util/mixins/main-app_mixin.js";
 import "./util/mixins/user-profile-form_mixin.js";
 import "./util/mixins/user-profile_mixin.js";
-import "./util/requests&queries/requests/default_requests/category-article_requests.js";
-import "./util/requests&queries/queries/gallery_queries.js";
 import "./util/requests&queries/queries/profile_queries.js";
-import "./util/requests&queries/requests/gallery_requests.js";
 import "./util/requests&queries/requests/login_requests.js";
 import "./util/requests&queries/requests/main-app_requests.js";
 import "./util/requests&queries/requests/profile_requests.js";
@@ -206,10 +203,4 @@ import "./templates/lib/methods-form-table_lib.js";
 
 import "./templates/lib/page-template_lib.js";
 
-
-import "./templates/lib/page-template_lib.js";
-
-
-import "./templates/lib/page-template_lib.js";
-
-import "./templates/lib/page-template_lib.js";
+import "../js/config.json";

@@ -62,10 +62,10 @@
     "web-vitals": "^2.1.0"
   },
   "devDependencies": {
-    "@parcel/packager-raw-url": "^2.5.0",
-    "@parcel/transformer-webmanifest": "^2.5.0",
-    "@swc/helpers": "^0.3.6",
-    "@webcomponents/webcomponentsjs": "^2.6.0",
-    "parcel": "^2.5.0"
+    "@parcel/packager-raw-url": "^2.7.0",
+    "@parcel/transformer-webmanifest": "^2.7.0",
+    "@swc/helpers": "^0.4.6",
+    "parcel": "^2.7.0",
+    "webcomponentsjs": "^1.0.2"
   }
 }

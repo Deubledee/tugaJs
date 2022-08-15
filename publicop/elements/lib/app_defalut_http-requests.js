@@ -1,6 +1,4 @@
-import { graphQlUrl, headers, httpGet, httpPost, getBlob } from '../../js/lib/http-handler';
-
-
+import { projectId, graphQlUrl, headers, httpGet, httpPost, getBlob } from '../../js/lib/http-handler';
 
 function _getPages(queries, header = false) {
     this.langs[this.lang] = {}
@@ -54,5 +52,5 @@ export {
     _postMedia,
     _getUsers,
     _postUsers
-    , getBlob
+    , getBlob, projectId
 }
